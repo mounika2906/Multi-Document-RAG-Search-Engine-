@@ -1,0 +1,12 @@
+langchain
+langchain-community
+langchain-openai
+faiss-cpu
+tavily-python
+streamlit
+openai
+pypdf
+wikipedia
+sentence-transformers
+python-dotenv
+pydantic
