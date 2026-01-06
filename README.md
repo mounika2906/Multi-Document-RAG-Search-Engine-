@@ -2,9 +2,6 @@
 
 This project implements a hybrid RAG (Retrieval-Augmented Generation) system that combines multi-document semantic search with real-time web search using Tavily.
 
-## Demo Mode
-
-**Note:** This version runs in demo mode without requiring API keys or billing. It performs document-only search and returns excerpts from indexed documents.
 
 ## Features
 
@@ -45,5 +42,5 @@ This project implements a hybrid RAG (Retrieval-Augmented Generation) system tha
 - **Ingestion**: Load and normalize documents from various sources
 - **Chunking**: Split documents into overlapping chunks
 - **Vector Store**: FAISS for efficient semantic search
-- **RAG Pipeline**: Assemble context and generate answers (simplified in demo)
+- **RAG Pipeline**: Assemble context and generate answers 
 - **UI**: Streamlit interface for interaction
