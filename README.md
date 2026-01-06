@@ -2,13 +2,18 @@
 
 This project implements a hybrid RAG (Retrieval-Augmented Generation) system that combines multi-document semantic search with real-time web search using Tavily.
 
+## Demo Mode
+
+**Note:** This version runs in demo mode without requiring API keys or billing. It performs document-only search and returns excerpts from indexed documents.
+
 ## Features
 
 - Multi-source document ingestion (PDFs, Wikipedia, Text files)
 - FAISS vector indexing for semantic search
-- Tavily integration for real-time web search
-- Query classification for routing between document and web sources
+- Tavily integration for real-time web search (disabled in demo)
+- Query classification (defaults to document search in demo)
 - Streamlit-based chatbot UI with source citations
+- Cost-free demo operation
 
 ## Setup
 
@@ -17,8 +22,7 @@ This project implements a hybrid RAG (Retrieval-Augmented Generation) system tha
    pip install -r requirements.txt
    ```
 
-2. Set up environment variables:
-   Create a `.env` file with:
+2. For full functionality (optional), create a `.env` file with API keys:
    ```
    OPENAI_API_KEY=your_openai_key
    TAVILY_API_KEY=your_tavily_key
@@ -32,15 +36,14 @@ This project implements a hybrid RAG (Retrieval-Augmented Generation) system tha
 ## Usage
 
 1. Upload documents via the sidebar
-2. Load Wikipedia pages if needed
-3. Ask questions in the chat interface
-4. View answers with citations and evidence tabs
+2. Load Wikipedia pages (requires internet)
+3. Ask questions - the system searches your documents and returns relevant information
+4. View source citations and evidence tabs
 
 ## Architecture
 
 - **Ingestion**: Load and normalize documents from various sources
 - **Chunking**: Split documents into overlapping chunks
 - **Vector Store**: FAISS for efficient semantic search
-- **Query Classification**: Route queries to appropriate sources
-- **RAG Pipeline**: Assemble context and generate answers with citations
+- **RAG Pipeline**: Assemble context and generate answers (simplified in demo)
 - **UI**: Streamlit interface for interaction
